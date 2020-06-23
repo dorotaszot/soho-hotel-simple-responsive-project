@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- to be finished -->
+
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <script src="https://kit.fontawesome.com/a47e3e9825.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Soho Hotel | Contact Us</title>
+</head>
+<body>
+  <header>
+    <nav id="navbar">
+      <div class="container">
+        <h1 class="logo"><a href="index.html">Soho Hotel</a></h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="current" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <section id="contact-form" class="py-3">
+    <div class="container">
+      <h1 class="l-heading"><span class="text-primary">Contact</span> Our Hotel</h1>
+      <p>Please fiil the form to conact us</p>
+      <form action="process.php">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea type="message" id="message" name="message"></textarea>
+        </div>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact-info" class="bg-dark">
+    <div class="container">
+      <div class="box">
+        <i class="fas fa-hotel fa-3x"></i>
+        <h3>Location</h3>
+        <p>55 High St, 30989 NYC</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-envelope fa-3x"></i>
+        <h3>Email</h3>
+        <p>contact@sohohotel.com</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-phone fa-3x"></i>
+        <h3>Phone</h3>
+        <p>(618) 444 4444</p>
+      </div>
+    </div>
+  </section>
+  <footer id="main-footer">
+    <p>Soho Hotel &copy; All Rights Reserved</p>
+  </footer>
+</body>
+</html>

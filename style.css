@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+}
+
+
+h1, h2, h3 {
+  padding-bottom: 20px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+/* Utilities */
+
+.container {
+  margin: auto;
+  max-width: 1100px;
+  overflow: auto;
+  padding: 0 20px;
+}
+
+.text-primary {
+  color: #f7c0aa;
+}
+
+.lead {
+  font-size: 20px;
+}
+
+.btn {
+  background: #333;
+  color: #fff;
+  /* Ważne!!!!!!!!!!!!!!!!!!!!! */
+  display: inline-block;
+  padding: 13px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  border: none;
+}
+
+.btn:hover {
+  color: #333;
+  background: #f7c0aa;
+}
+
+.btn-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.bg-light {
+ background: #f4f4f4;
+ color: #333;
+}
+
+.bg-primary {
+  color: #333;
+  background: #f7c0aa;
+}
+
+.clr {
+  clear: both;
+}
+
+/* Paddings */
+
+.py-1 { padding: 10px 0 }
+.py-2 { padding: 20px 0 }
+.py-3 { padding: 30px 0 }
+
+.l-heading { font-size: 30px;}
+
+/* Navbar */
+
+#navbar {
+  background: #333; 
+  /* overflow? po co tyle razy kolor? overflow: zeby content nie wychodzl poza ciemne tło*/
+  color: #fff;
+  overflow: auto;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+#navbar h1 {
+  float: left;
+  padding-top: 20px;
+}
+
+#navbar ul {
+  color: #fff;
+  float: right;
+}
+
+/* kiedy li a kiedy li a */
+
+#navbar ul li {
+  float: left;
+}
+#navbar ul li a{
+  display: block;
+  text-align: center;
+  padding: 20px;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current {
+  background: #444;
+  color: #f7c0aa;
+}
+
+/* Showcase */
+
+#showcase {
+  background: url('../img/hotel.jpg') no-repeat center center/cover;
+  height: 600px;
+}
+
+.showcase-content {
+  text-align: center;
+  color: #fff;
+  padding-top: 170px;
+}
+
+.showcase-content h1 {
+  font-size: 60px;
+  line-height: 1.2em;
+}
+
+.showcase-content p {
+  padding-bottom: 20px;
+  line-height: 1.7em;
+}
+
+/* Home-info */
+
+#home-info {
+  height: 400px;
+}
+
+.info-img {
+  float: left;
+/* Ważne!!!!!!!!!!!!!!!!!!! */
+  width: 50%;
+  min-height: 100%;
+
+  background: url('../img/room.jpg') no-repeat;
+}
+
+.info-content {
+  float: right;
+  text-align: center;
+  padding: 50px 30px;
+  /* Ważne!!!!!!!!!!!!!!!!!!! */
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+}
+
+.info-content p {
+  padding-bottom: 30px;
+}
+
+
+/* 3 boxes with icons */
+
+.box {
+  float: left;
+  width: 33.3%;
+  padding: 50px;
+  text-align: center;
+  height: 300px;
+}
+
+.box i {
+  padding-bottom: 10px;
+}
+
+#main-footer {
+  padding: 30px;
+  background: #444;
+  text-align: center;
+  color: #fff;
+}
+
+.info-right {
+  float: right;
+  width: 50%;
+  min-height: 100%;
+}
+
+.info-right img {
+  display: block;
+  width: 70%;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.info-left {
+  float: left;
+  width: 50%;
+  min-height: 400px;
+}
+
+#testimonials h2.l-heading {
+  color: #fff;
+  text-align: center;
+}
+#testimonials {
+  background: url(./img/street2.jpg) center center/cover no-repeat;
+  height: 600px;
+  padding-top: 100px;
+}
+
+.testimonial {
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  opacity: .9;
+}
+.testimonial img {
+  height: 100px;
+  float: left;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+#contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px #ddd solid;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f7c0aa; 
+}
+
+.form-group textarea {
+  height: 200px;
+}
+

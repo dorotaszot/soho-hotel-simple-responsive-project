@@ -38,7 +38,6 @@ p {
 .btn {
   background: #333;
   color: #fff;
-  /* Ważne!!!!!!!!!!!!!!!!!!!!! */
   display: inline-block;
   padding: 13px 20px;
   cursor: pointer;
@@ -85,11 +84,15 @@ p {
 
 /* Navbar */
 
-#navbar {
+#navbar .container{
   background: #333; 
-  /* overflow? po co tyle razy kolor? overflow: zeby content nie wychodzl poza ciemne tło*/
   color: #fff;
-  overflow: auto;
+  display: flex;  
+  justify-content: space-between;
+}
+
+#navbar {
+  background-color: #333;
 }
 
 a {
@@ -102,20 +105,14 @@ li {
 }
 
 #navbar h1 {
-  float: left;
   padding-top: 20px;
 }
 
 #navbar ul {
+  display: flex;
   color: #fff;
-  float: right;
 }
 
-/* kiedy li a kiedy li a */
-
-#navbar ul li {
-  float: left;
-}
 #navbar ul li a{
   display: block;
   text-align: center;
@@ -132,7 +129,7 @@ li {
 
 #showcase {
   background: url('../img/hotel.jpg') no-repeat center center/cover;
-  height: 600px;
+  height: 100vh;
 }
 
 .showcase-content {
@@ -155,25 +152,22 @@ li {
 
 #home-info {
   height: 400px;
+  display: flex;
 }
 
 .info-img {
-  float: left;
-/* Ważne!!!!!!!!!!!!!!!!!!! */
-  width: 50%;
-  min-height: 100%;
-
+  flex-basis: 50%;
   background: url('../img/room.jpg') no-repeat;
+  height: 100%;
+
 }
 
 .info-content {
-  float: right;
   text-align: center;
   padding: 50px 30px;
-  /* Ważne!!!!!!!!!!!!!!!!!!! */
   overflow: hidden;
-  width: 50%;
-  height: 100%;
+  flex-basis: 50%;
+  height: auto;
 }
 
 .info-content p {
@@ -183,17 +177,22 @@ li {
 
 /* 3 boxes with icons */
 
+.three-boxes {
+display: flex;
+}
+
 .box {
-  float: left;
   width: 33.3%;
   padding: 50px;
   text-align: center;
-  height: 300px;
+  height: auto;
 }
 
 .box i {
   padding-bottom: 10px;
 }
+
+/* Footer */
 
 #main-footer {
   padding: 30px;
@@ -202,24 +201,25 @@ li {
   color: #fff;
 }
 
-.info-right {
-  float: right;
-  width: 50%;
-  min-height: 100%;
+/* About */
+
+#about-info .container {
+  display: flex;
+
+}
+
+.info-right,
+.info-left {
+  flex-basis: 50%;
+  padding: 20px
 }
 
 .info-right img {
-  display: block;
-  width: 70%;
-  margin: auto;
   border-radius: 50%;
+  width: 100%;
 }
 
-.info-left {
-  float: left;
-  width: 50%;
-  min-height: 400px;
-}
+/* Testimonials */
 
 #testimonials h2.l-heading {
   color: #fff;
@@ -227,11 +227,12 @@ li {
 }
 #testimonials {
   background: url(./img/street2.jpg) center center/cover no-repeat;
-  height: 600px;
   padding-top: 100px;
+  min-height: 600px;
 }
 
 .testimonial {
+  display: flex;
   padding: 20px;
   margin-bottom: 40px;
   border-radius: 5px;
@@ -239,7 +240,6 @@ li {
 }
 .testimonial img {
   height: 100px;
-  float: left;
   border-radius: 50%;
   margin-right: 20px;
 }
@@ -267,5 +267,70 @@ li {
 
 .form-group textarea {
   height: 200px;
+}
+
+@media(max-width: 774px) {
+  .info-img {
+    display: none;
+  } 
+  .info-content {
+    flex-basis: 100%;
+  }
+  .email-box {
+    padding: 50px 10px;
+  }
+}
+
+@media(max-width: 610px) {
+
+  .three-boxes {
+    display: block;
+  }
+  .three-boxes .box {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  .three-boxes .location-box {
+    padding-top: 40px;
+  }
+
+  #about-info .container {
+    display: block;
+    min-height: 500px;
+  }
+  #showcase {
+    height: 80vh;
+  }
+ 
+}
+
+@media(max-width: 445px) {
+  #navbar .container {
+    display: block;
+  }
+  #navbar ul {
+    display: block;
+    width: 100%;
+  }
+  #navbar h1 {
+    text-align: center;
+  }
+  #navbar ul li a, 
+  h1 {
+    padding: 5px;
+  }
+  .showcase-content  {
+    padding-top: 10px;
+  }
+  #showcase {
+    height: 80vh;
+  }
+  #home-info {
+    min-height: 500px;
+  }
+  #features .box {
+    padding-top: 30px;
+  }
 }
 
